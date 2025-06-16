@@ -3,28 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Interactive AI Agent</title>
+  <title>Centered AI Agent</title>
   <style>
     body {
       margin: 0;
-      background-color: green; /* Green screen background for OBS */
+      background-color: green; /* Use any chroma key color here */
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+    }
+
+    #agent-container {
+      width: 500px;
+      height: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    did-agent {
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
-  <!-- D-ID Visual Agent Script Embed -->
-  <script
-    type="module"
-    src="https://agent.d-id.com/v1/index.js"
-    data-name="did-agent"
-    data-mode="fabio"
-    data-client-key="Z29vZ2xlLW9hdXRoMnwxMTQxMjYzNTk4MjM2MzI1MDA1NjY6OXlBVTV5Z0gtOXpONnZ4T2U2b19O"
-    data-agent-id="agt_m_qF8Axx"
-    data-monitor="true">
-  </script>
+
+  <div id="agent-container">
+    <!-- The agent will now appear inside this container -->
+    <script
+      type="module"
+      src="https://agent.d-id.com/v1/index.js"
+      data-name="did-agent"
+      data-mode="embedded"
+      data-client-key="Z29vZ2xlLW9hdXRoMnwxMTQxMjYzNTk4MjM2MzI1MDA1NjY6OXlBVTV5Z0gtOXpONnZ4T2U2b19O"
+      data-agent-id="agt_m_qF8Axx"
+      data-monitor="true">
+    </script>
+  </div>
+
 </body>
 </html>
